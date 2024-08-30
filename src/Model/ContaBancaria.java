@@ -17,7 +17,6 @@ public class ContaBancaria {
         this.titular = titular;
         this.saldo = saldo;
     }
-
     public String getTitular() {
         return titular;
     }
@@ -47,8 +46,6 @@ public class ContaBancaria {
     public void sacar(double valor) {
         saldo -= valor;
     }
-
-
 }
 
 

@@ -23,7 +23,6 @@ public class Circulo {
     }
     public double getArea() {
         return Math.PI * (raio * raio);
-
     }
     public double getPerimetro() {
         return Math.PI * raio * 2;
