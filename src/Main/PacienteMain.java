@@ -7,6 +7,9 @@ public class PacienteMain {
         Paciente paciente = new Paciente("Gustavo Garcia", 12);
         System.out.println("Nome: " + paciente.getNome());
         System.out.println("Idade: " + paciente.getIdade());
+        paciente.InserirConsulta("consulta1");
+        paciente.InserirConsulta("consulta2");
+        paciente.exibirConsultas();
     }
 
 }

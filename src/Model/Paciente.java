@@ -47,13 +47,11 @@ public class Paciente {
     }
     public void InserirConsulta(String consulta) {
         historicoConsultas.add(consulta);
-        System.out.println(historicoConsultas);
     }
     public void excluirConsulta(String consulta) {
         historicoConsultas.remove(consulta);
-        System.out.println(historicoConsultas);
     }
     public void exibirConsultas() {
-        System.out.println(historicoConsultas);
+        System.out.println("Consultas: " + historicoConsultas);
     }
 }

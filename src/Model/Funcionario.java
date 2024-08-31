@@ -1,32 +1,72 @@
 //5. Funcionário
-//Crie uma classe chamada “Funcionário” com atributos para armazenar o nome, o salário e o cargo do funcionário. Implemente métodos para calcular o salário líquido, considerando descontos de impostos e benefícios.
+//Crie uma classe chamada “Funcionário” com atributos para armazenar o nome, o salário e o cargo do funcionário.
+// Implemente métodos para calcular o salário líquido, considerando descontos de impostos e benefícios.
 //
-//6. Produto
-//Implemente uma classe chamada “Produto” que possua atributos para armazenar o nome, o preço e a quantidade em estoque. Adicione métodos para calcular o valor total em estoque e verificar se o produto está disponível.
-//
-//7. Triângulo
-//Crie uma classe chamada “Triângulo” com atributos para armazenar os três lados do triângulo. Implemente métodos para verificar se é um triângulo válido e calcular sua área.
-//
-//8. Carro
-//Implemente uma classe chamada “Carro” com atributos para armazenar a marca, o modelo e a velocidade atual do carro. Adicione métodos para acelerar, frear e exibir a velocidade atual.
-//
-//9. Paciente
-//Crie uma classe chamada “Paciente” que possua atributos para armazenar o nome, a idade e o histórico de consultas de um paciente. Implemente métodos para adicionar uma nova consulta ao histórico e exibir as consultas realizadas.
-//
-//10. Livro
-//Implemente uma classe chamada “Livro” com atributos para armazenar o título, o autor e o número de páginas do livro. Adicione métodos para emprestar o livro, devolvê-lo e verificar se está disponível.
-
-
-
-
-
-
-
-
-
-
 
 package Model;
 
 public class Funcionario {
+    private String nome;
+    private double salario;
+    private String cargo;
+    private double bonus;
+    private double impostos;
+
+
+    public Funcionario(double impostos, double bonus) {
+        this.impostos = impostos;
+        this.bonus = bonus;
+    }
+
+    public Funcionario(String nome, double salario, String cargo) {
+        this.nome = nome;
+        this.salario = salario;
+        this.cargo = cargo;
+
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+
+    public double getBonus() {
+        return bonus;
+    }
+
+    public void setBonus(double bonus) {
+        this.bonus = bonus;
+    }
+
+    public double getImpostos() {
+        return impostos;
+    }
+
+    public void setImpostos(double impostos) {
+        this.impostos = impostos;
+    }
+
+    public double salarioLiquido(){
+        return salario - (impostos / 100 * salario);
+    }
+
 }
