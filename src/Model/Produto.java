@@ -1,19 +1,67 @@
 //6. Produto
-//Implemente uma classe chamada “Produto” que possua atributos para armazenar o nome, o preço e a quantidade em estoque. Adicione métodos para calcular o valor total em estoque e verificar se o produto está disponível.
-//
-//7. Triângulo
-//Crie uma classe chamada “Triângulo” com atributos para armazenar os três lados do triângulo. Implemente métodos para verificar se é um triângulo válido e calcular sua área.
-//
-//8. Carro
-//Implemente uma classe chamada “Carro” com atributos para armazenar a marca, o modelo e a velocidade atual do carro. Adicione métodos para acelerar, frear e exibir a velocidade atual.
-//
-//9. Paciente
-//Crie uma classe chamada “Paciente” que possua atributos para armazenar o nome, a idade e o histórico de consultas de um paciente. Implemente métodos para adicionar uma nova consulta ao histórico e exibir as consultas realizadas.
-//
-//10. Livro
-//Implemente uma classe chamada “Livro” com atributos para armazenar o título, o autor e o número de páginas do livro. Adicione métodos para emprestar o livro, devolvê-lo e verificar se está disponível.
+//Implemente uma classe chamada “Produto” que possua atributos para
+// armazenar o nome, o preço e a quantidade em estoque.
+//Adicione métodos para calcular o valor total em estoque e verificar se o produto está disponível.
 
 package Model;
 
 public class Produto {
+    private String nome;
+    private double preco;
+    private int quantidade;
+
+    public Produto(String nome, double preco, int quantidade) {
+        this.nome = nome;
+        this.preco = preco;
+        this.quantidade = quantidade;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+    public double valorTotal(){
+        return (preco * quantidade);
+    }
+    public void estaDisponivel(){
+        if (quantidade > 0){
+            System.out.println("Produto disponível, possuindo a quantidade: " + quantidade);
+        }
+        else{
+            System.out.println("Produto indisponível");
+        }
+    }
+    //Adicione métodos para calcular o valor total em estoque e verificar se o produto está disponível.
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

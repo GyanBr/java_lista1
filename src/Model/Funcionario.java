@@ -1,28 +1,22 @@
 //5. Funcionário
 //Crie uma classe chamada “Funcionário” com atributos para armazenar o nome, o salário e o cargo do funcionário.
 // Implemente métodos para calcular o salário líquido, considerando descontos de impostos e benefícios.
-//
 
 package Model;
 
-public class Funcionario {
+public class Funcionario{
     private String nome;
     private double salario;
     private String cargo;
     private double bonus;
     private double impostos;
 
-
-    public Funcionario(double impostos, double bonus) {
-        this.impostos = impostos;
-        this.bonus = bonus;
-    }
-
-    public Funcionario(String nome, double salario, String cargo) {
+    public Funcionario(String nome, double salario, String cargo, double bonus, double impostos) {
         this.nome = nome;
         this.salario = salario;
         this.cargo = cargo;
-
+        this.bonus = bonus;
+        this.impostos = impostos;
     }
 
     public String getNome() {
@@ -66,7 +60,6 @@ public class Funcionario {
     }
 
     public double salarioLiquido(){
-        return salario - (impostos / 100 * salario);
+        return (salario + bonus) - (impostos / 100 * (salario + bonus));
     }
-
 }
